@@ -7,7 +7,7 @@ git clone https://github.com/Arturstriker3/SearchSift
 
 ## Open the Project
 ```
-cd .\testespeedio\ 
+cd .\SearchSift\ 
 ```
 
 ## Dependency Installation
