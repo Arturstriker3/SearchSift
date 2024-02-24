@@ -1,0 +1,1 @@
+SearchSift is an application that allows users to search the contents of the Amazon search results page for a specific keyword. With SearchSift, users can quickly find and analyze Amazon search results and filter them according to their business needs.

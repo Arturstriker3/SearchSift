@@ -1,0 +1,63 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Amazon Product Scraper API",
+    "description": "Product Scraper for Amazon Marketplace",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/scrape": {
+      "get": {
+        "description": "Endpoint to scrape Amazon products based on a keyword.",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "The keyword to search for Amazon products.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "description": "The unique identifier for the product."
+                },
+                "title": {
+                  "type": "string",
+                  "description": "The title of the product."
+                },
+                "rating": {
+                  "type": "number",
+                  "description": "The rating of the product."
+                },
+                "numReviews": {
+                  "type": "integer",
+                  "description": "The number of reviews for the product."
+                },
+                "image": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL of the product image."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
